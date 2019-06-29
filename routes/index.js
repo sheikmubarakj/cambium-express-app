@@ -1,14 +1,8 @@
 var express = require('express');
 var router = express.Router();
-
-// /* GET home page. */
-// router.get('/', function(req, res, next) {
-//   res.render('index', { title: 'Express' });
-// });
-
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb://127.0.0.1/cambium',  {useNewUrlParser: true});
+mongoose.connect('mongodb+srv://testuser:7Boagkn4Og0pPKM5@mycluster0-pra64.mongodb.net/cambium?retryWrites=true&w=majority', {useNewUrlParser: true})
 
 let schema = new mongoose.Schema({
     member_id: Number, 
